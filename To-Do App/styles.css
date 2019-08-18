@@ -1,19 +1,11 @@
-/* #draggable {
-    width: 200px;
-    height: 20px;
-    text-align: center;
-    background: white;
-} */
-
 .dropzone {
-    width: 277.5px;
+    width: 280px;
     height: 20px;
     border: 1.5px solid darkblue;
     margin-bottom: 10px;
     padding: 10px;
     font-weight: bold;
     background-color: rgb(236, 223, 248);
-
 }
 
 span {
@@ -21,20 +13,18 @@ span {
     overflow: hidden;
 }
 
-.app {
-    display: flex;
-}
-
 .app>div {
+    float: left;
     margin: 40px;
     border: 2px solid #000;
     padding: 10px;
 }
 
 input {
-    width: 300px;
+    font-style: italic;
+    width: 250px;
     height: 35px;
-    font-size: 18px;
+    font-size: 15px;
     border: 1.5px solid rgb(0, 119, 93);
     font-weight: bold;
     padding: 5px;
@@ -51,14 +41,42 @@ button {
 
 }
 
-h2,
-h1 {
-    text-decoration: underline;
-    font-style: italic
-}
 
 #done-fields,
 #prog-fields,
 #new-fields {
-    margin-top: 30px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.dropzone:last-child {
+    background-color: transparent;
+    border: none;
+}
+
+form {
+    padding: 10px;
+}
+
+.deleteTask {
+    border: none;
+    float: right;
+    margin-top: -5px;
+}
+
+.dropzone:active {
+    opacity: 0.2;
+}
+
+.hovering {
+    background-color: blue !important;
+    color: white
+}
+
+header,
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic
 }

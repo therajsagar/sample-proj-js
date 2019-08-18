@@ -7,58 +7,43 @@
 
 <body>
     <header>
-        <h1>TO-DO List</h1>
+        <h1>TO-DO LIST</h1>
     </header>
-
-    <!-- <div class="dropzone">
-        <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
-            This div is draggable
-        </div>
-    </div>
-    <div class="dropzone"></div>
-    <div class="dropzone"></div>
-    <div class="dropzone"></div> -->
     <div class="app">
         <div class="new">
-            <h2>New Tasks</h2>
-            <hr />
-            <input type='text' />
-            <button name='new' onclick="addtask(event)">ADD</button>
-            <hr />
-            <div id="new-fields">
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
+            <form>
+                <h2>New Tasks</h2>
+                <hr />
+                <input type='text' />
+                <button name='new' onclick="addtask(event)">ADD</button>
+                <hr />
+            </form>
+            <div id="new-fields" ondrop="onDrop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                <div class="dropzone" id="new-0"></div>
             </div>
         </div>
         <div class="prog">
-            <h2>In-Progress Tasks</h2>
-            <hr />
-            <input type='text' />
-            <button name='prog' onclick="addtask(event)">ADD</button>
-            <hr />
-            <div id="prog-fields">
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
+            <form>
+                <h2>In-Progress Tasks</h2>
+                <hr />
+                <input type='text' />
+                <button name='prog' onclick="addtask(event)">ADD</button>
+                <hr />
+            </form>
+            <div id="prog-fields" ondrop="onDrop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                <div class="dropzone" id="prog-0"></div>
             </div>
         </div>
         <div class="done">
-            <h2>Completed Tasks</h2>
-            <hr />
-            <input type='text' />
-            <button name='done' onclick="addtask(event)">ADD</button>
-            <hr />
-            <div id="done-fields">
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
+            <form>
+                <h2>Completed Tasks</h2>
+                <hr />
+                <input type='text' />
+                <button name='done' onclick="addtask(event)">ADD</button>
+                <hr />
+            </form>
+            <div id="done-fields" ondrop="onDrop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                <div class="dropzone" id="done-0"></div>
             </div>
         </div>
     </div>
