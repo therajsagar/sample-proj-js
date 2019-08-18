@@ -1,9 +1,38 @@
+(function initialize() {
+  const tasks = getLocalStorage();
+  if (tasks) {
+    for (let i in tasks) {
+      const list = tasks[i];
+      const parentNode = document.getElementById(`${i}-fields`);
+      for (let k = 0; k < list.length; k++) {
+        const node = createNode(list[k], `${i}-${k}`);
+        parentNode.insertBefore(node, parentNode.lastElementChild);
+      }
+      parentNode.lastElementChild.id = `${i}-${parentNode.children.length - 1}`;
+    }
+  }
+})();
+
+function getLocalStorage() {
+  return JSON.parse(localStorage.getItem('tasks')) || {};
+}
+
+function updateLocalStorage(name, tasks) {
+  let store = getLocalStorage();
+  store[name] = tasks;
+  localStorage.setItem('tasks', JSON.stringify(store));
+}
+
 function reIndexing(parentNode) {
   const prefix = parentNode.id.split('-')[0];
   const list = parentNode.children;
+  const tasks = [];
   for (let i = 0; i < list.length; i++) {
     list[i].setAttribute('id', `${prefix}-${i}`);
+    tasks.push(list[i].textContent.slice(0, -1));
   }
+  tasks.splice(-1);
+  updateLocalStorage(prefix, tasks);
 }
 
 function deleteHandler(ev) {
@@ -11,6 +40,18 @@ function deleteHandler(ev) {
   const parent = node.parentNode;
   parent.removeChild(node);
   reIndexing(parent);
+}
+
+function dragStart(ev) {
+  ev.dataTransfer.setData('text', ev.target.id);
+}
+
+function dragEnter(ev) {
+  ev.target.classList.add('hovering');
+}
+
+function dragLeave(ev) {
+  ev.target.classList.remove('hovering');
 }
 
 function assignDelete() {
@@ -48,12 +89,6 @@ function addtask(ev) {
     inputField.value = '';
   }
 }
-
-const dragStart = ev => ev.dataTransfer.setData('text', ev.target.id);
-
-const dragEnter = ev => ev.target.classList.add('hovering');
-
-const dragLeave = ev => ev.target.classList.remove('hovering');
 
 const allowDrop = ev => {
   ev.preventDefault();
