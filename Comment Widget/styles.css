@@ -32,7 +32,49 @@ body {
     border: 1px solid rgb(221, 215, 215);
     border-radius: 5px;
     padding: 10px;
-    width: 417px;
+    width: 600px;
     background-color: rgb(246, 246, 209);
     font-style: italic
+}
+
+.reply,
+.edit,
+.delete,
+.like,
+.likeCount {
+    margin: 10px;
+    background: transparent;
+    border: none;
+    font-weight: bolder;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.like {
+    color: rgb(251, 104, 202);
+}
+
+.likeCount {
+    color: skyblue;
+    text-decoration: none;
+    font-style: normal;
+    margin: 1px;
+}
+
+.reply {
+    color: limegreen;
+}
+
+.edit {
+    color: darkblue
+}
+
+.delete {
+    color: red;
+}
+
+span {
+    font-weight: bolder;
+    border: 1px solid sandybrown;
+    padding: 10px 30px 10px 30px;
 }
