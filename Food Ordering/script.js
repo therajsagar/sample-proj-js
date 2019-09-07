@@ -11,6 +11,7 @@
         }));
         setLocalStorage('menu', list);
     }
+    setLocalStorage('results', list);
     generateView(list);
 })()
 
@@ -35,7 +36,7 @@ function createTagElement(name) {
 
 function generateCard(data) {
     const item = document.createElement('div');
-    item.id = data.id;
+    item.id = data.ID;
     item.classList.add('sub-container');
     const img = document.createElement('img');
     img.src = data.img;
@@ -43,7 +44,7 @@ function generateCard(data) {
     const subdiv = document.createElement('div');
     const label = document.createElement('p');
     label.classList.add('label')
-    label.innerHTML = data.name;
+    label.innerHTML = data.Name;
     const loca = document.createElement('p');
     loca.classList.add('location');
     loca.innerHTML = data.location;
@@ -52,11 +53,11 @@ function generateCard(data) {
     loca.appendChild(locimg)
     const sublabel = document.createElement('p');
     const rating = document.createElement('span');
-    rating.innerHTML = `${data.rating} &#9733;`;
+    rating.innerHTML = `${data.Rating} &#9733;`;
     rating.classList.add('rating')
     const eta = document.createElement('span');
     eta.classList.add('eta')
-    eta.innerHTML = `ETA : ${data.eta} mins`;
+    eta.innerHTML = `ETA : ${data.ETA} mins`;
     const tags = document.createElement('p');
     tags.classList.add('tags');
     for (i of data.tags) {
@@ -76,8 +77,69 @@ function generateCard(data) {
 
 
 function generateView(list) {
-    const view = document.getElementById('main-container')
-    for (i of list) {
-        view.appendChild(generateCard(i))
+    const view = document.getElementById('main-container');
+    view.innerHTML = "";
+    if (list.length) {
+        for (i of list) {
+            view.appendChild(generateCard(i))
+        }
+    } else {
+        view.appendChild(noData())
     }
+    setLocalStorage('current', list);
+}
+
+
+function sortBy(value) {
+    let list = getLocalStorage('current');
+    if (value === 'Name') {
+        list.sort((i, j) => i.Name.localeCompare(j.Name));
+    } else {
+        list.sort((i, j) => value === 'ETA' ? i[value] - j[value] : j[value] - i[value])
+    }
+    generateView(list);
+}
+
+
+function filterBy(value) {
+    let list = getLocalStorage('results');
+    resetPageFilters('sort-by');
+    if (value !== 'All') {
+        list = list.filter(({
+            tags
+        }) => tags.includes(value))
+    }
+    generateView(list);
+}
+
+
+function search() {
+    const ip = document.getElementById('ip');
+    const value = ip.value.toLowerCase().trim();
+    if (value) {
+        resetPageFilters('sort-by');
+        resetPageFilters('filter-by');
+        let list = getLocalStorage('menu');
+        list = list.filter(i => i.Name.toLowerCase().includes(value));
+        setLocalStorage('results', list);
+        generateView(list);
+    } else {
+        ip.value = "";
+    }
+}
+
+const resetPage = () => location.reload();
+
+
+
+function noData() {
+    const noResult = document.createElement('div');
+    noResult.innerText = 'No Matching Results';
+    noResult.id = 'no-results';
+    return noResult;
+}
+
+function resetPageFilters(id) {
+    const el = document.getElementById(id);
+    el.selectedIndex = "0";
 }

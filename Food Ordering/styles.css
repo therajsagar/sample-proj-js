@@ -70,3 +70,38 @@ img {
     top: 2px;
     margin-left: 5px;
 }
+
+input[type=text] {
+    width: 500px;
+    height: 40px;
+    font-size: 16px;
+    padding: 3px;
+}
+
+button {
+    height: 40px;
+}
+
+
+#reset-all {
+    float: right;
+}
+
+
+#no-results {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+}
+
+label {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+select {
+    padding: 5px;
+    color: green;
+    font-weight: bold;
+}

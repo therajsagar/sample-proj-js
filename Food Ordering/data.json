@@ -1,45 +1,45 @@
 {
     "data": [{
-        "id": "r1",
-        "name": "Rest-A",
-        "rating": 3.9,
+        "ID": "r1",
+        "Name": "Subway",
+        "Rating": 3.9,
         "location": "loc-A",
-        "eta": 20,
+        "ETA": 20,
         "img": "https://cdn.pixabay.com/photo/2014/04/07/05/25/gummibarchen-318362__340.jpg",
-        "tags": ["nveg", "spicy"]
+        "tags": ["nveg", "fun"]
     }, {
-        "id": "r2",
-        "name": "Rest-B",
-        "rating": 4.7,
+        "ID": "r2",
+        "Name": "Barbeque",
+        "Rating": 4.7,
         "location": "loc-B",
-        "eta": 23,
+        "ETA": 23,
         "img": "https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466__340.jpg",
-        "tags": ["chinese", "spicy"]
+        "tags": ["chinese", "drink"]
 
     }, {
-        "id": "r3",
-        "name": "Rest-C",
-        "rating": 3.7,
+        "ID": "r3",
+        "Name": "Radisson",
+        "Rating": 3.7,
         "location": "loc-C",
-        "eta": 35,
+        "ETA": 35,
         "img": "https://cdn.pixabay.com/photo/2010/12/13/10/05/background-2277__340.jpg",
-        "tags": ["veg", "sweet"]
+        "tags": ["veg", "chinese"]
 
     }, {
-        "id": "r4",
-        "name": "Rest-D",
-        "rating": 4.1,
+        "ID": "r4",
+        "Name": "Empire Restaurant",
+        "Rating": 4.1,
         "location": "loc-D",
-        "eta": 29,
+        "ETA": 29,
         "img": "https://cdn.pixabay.com/photo/2016/04/13/07/18/blueberry-1326154__340.jpg",
         "tags": ["drink", "fun"]
 
     }, {
-        "id": "r5",
-        "name": "Rest-E",
-        "rating": 4.5,
+        "ID": "r5",
+        "Name": "Pizza Hut",
+        "Rating": 4.5,
         "location": "loc-E",
-        "eta": 26,
+        "ETA": 26,
         "img": "https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361__340.jpg",
         "tags": ["nveg", "drink"]
 
