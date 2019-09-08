@@ -1,0 +1,47 @@
+{
+    "data": [{
+        "id": "r1",
+        "name": "Rest-A",
+        "rating": 3.9,
+        "location": "loc-A",
+        "eta": 20,
+        "img": "https://cdn.pixabay.com/photo/2014/04/07/05/25/gummibarchen-318362__340.jpg",
+        "tags": ["nveg", "spicy"]
+    }, {
+        "id": "r2",
+        "name": "Rest-B",
+        "rating": 4.7,
+        "location": "loc-B",
+        "eta": 23,
+        "img": "https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466__340.jpg",
+        "tags": ["chinese", "spicy"]
+
+    }, {
+        "id": "r3",
+        "name": "Rest-C",
+        "rating": 3.7,
+        "location": "loc-C",
+        "eta": 35,
+        "img": "https://cdn.pixabay.com/photo/2010/12/13/10/05/background-2277__340.jpg",
+        "tags": ["veg", "sweet"]
+
+    }, {
+        "id": "r4",
+        "name": "Rest-D",
+        "rating": 4.1,
+        "location": "loc-D",
+        "eta": 29,
+        "img": "https://cdn.pixabay.com/photo/2016/04/13/07/18/blueberry-1326154__340.jpg",
+        "tags": ["drink", "fun"]
+
+    }, {
+        "id": "r5",
+        "name": "Rest-E",
+        "rating": 4.5,
+        "location": "loc-E",
+        "eta": 26,
+        "img": "https://cdn.pixabay.com/photo/2016/05/24/13/29/olive-oil-1412361__340.jpg",
+        "tags": ["nveg", "drink"]
+
+    }]
+}
