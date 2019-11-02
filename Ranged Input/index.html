@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Task I</title>
+</head>
+
+<body>
+    <header>TASK-I</header>
+    <input type='text' id='ip' />
+    <button onclick="addToStorage()">Submit</button>
+    <div id='results'></div>
+    <div id='dup'></div>
+    <script>
+        const myarr = [7001, 7002, 7003, 7004, 7005];
+        const dup = [];
+
+        function addToStorage() {
+            const el = document.getElementById('ip');
+            const val = el.value.trim();
+            if (val) {
+                addToArr(val.split(','));
+                document.getElementById('results').innerHTML = `Resulting Array = ${myarr}`;
+                document.getElementById('dup').innerHTML = `Duplicates = ${dup.length>0? dup : 'NONE'}`;
+            }
+            el.value = ''
+        }
+
+
+        function addToArr(val) {
+            for (let i of val) {
+                if (i.includes('-')) {
+                    let [s, e] = i.split('-').map((i, j, l) => l[j] ? l[j - 1] === '' ? -Number(l[j]) : Number(l[j]) :
+                        null).filter(i => i);
+                    if (s && e) {
+                        for (let k = Math.min(s, e); k <= Math.max(s, e); k++) {
+                            checkAdd(k)
+                        }
+                    }
+                } else {
+                    const k = Number(i.trim());
+                    k && checkAdd(k);
+                }
+            }
+        }
+        const checkAdd = k => myarr.includes(k) ? !dup.includes(k) && dup.push(k) : myarr.push(k); 
+        </script
+         </body >
+ </html >
