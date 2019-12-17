@@ -1,37 +1,34 @@
 <html>
-
-<head>
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
     <title>FOOD ORDERING</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="app">
-        <div class="head-container">
-            <input type='text' placeholder="Search restaurant names..." id='ip' />
-            <button onclick="search()">Search</button>
-            <label for='filter-by'>Filter by:</label>
-            <select id='filter-by' onchange="filterBy(event.target.value)">
-                <option>All</option>
-                <option>drink</option>
-                <option>fun</option>
-                <option>nveg</option>
-                <option>veg</option>
-                <option>chinese</option>
-            </select>
-            <label for='sort-by'>Sort by:</label>
-            <select id='sort-by' onchange="sortBy(event.target.value)">
-                <option>Name</option>
-                <option>ETA</option>
-                <option>Rating</option>
-            </select>
-            <button onclick="resetPage()" id='reset-all'>Reset Results</button>
-        </div>
-        <div id="main-container"></div>
+      <div class="head-container">
+        <input type="text" placeholder="Search restaurant names..." id="ip" />
+        <button onclick="search()">Search</button>
+        <label for="filter-by">Filter by:</label>
+        <select id="filter-by" onchange="filterBy(event.target.value)">
+          <option>All</option>
+          <option>drink</option>
+          <option>fun</option>
+          <option>nveg</option>
+          <option>veg</option>
+          <option>chinese</option>
+        </select>
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by" onchange="sortBy(event.target.value)">
+          <option>Name</option>
+          <option>ETA</option>
+          <option>Rating</option>
+        </select>
+        <button onclick="resetPage()" id="reset-all">Reset Results</button>
+      </div>
+      <div id="main-container"></div>
     </div>
 
     <script src="./script.js"></script>
-
-</body>
-
+  </body>
 </html>

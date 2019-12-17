@@ -1,80 +1,82 @@
 body {
-    background-color: #e6e8e1;
+  background-color: #e6e8e1;
 }
 
 #carousel {
-    height: 80%;
-    width: 80%;
-    margin: 20px auto 0;
-    overflow: hidden;
-    position: relative;
+  height: 80%;
+  width: 80%;
+  margin: 20px auto 0;
+  overflow: hidden;
+  position: relative;
 }
 
 #carousel .slides .hero {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 #carousel .slides .hero1 {
-    background: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/id8822848557b488d/version/1517255130/colmar-france-best-destinations-in-europe.jpg") white;
-    background-size: 100% auto;
+  background: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/id8822848557b488d/version/1517255130/colmar-france-best-destinations-in-europe.jpg")
+    white;
+  background-size: 100% auto;
 }
 
 #carousel .slides .hero2 {
-    background: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/ifcd0ca42c1dcc484/version/1517997453/hvar-island-croatia-best-destinations-in-europe.jpg") white;
-    background-size: 100% auto;
+  background: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/ifcd0ca42c1dcc484/version/1517997453/hvar-island-croatia-best-destinations-in-europe.jpg")
+    white;
+  background-size: 100% auto;
 }
 
 #carousel .slides .hero3 {
-    background: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i4e640bac41760f05/version/1516788611/paris-france-european-best-destinations.jpg") white;
-    background-size: 100% auto;
+  background: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i4e640bac41760f05/version/1516788611/paris-france-european-best-destinations.jpg")
+    white;
+  background-size: 100% auto;
 }
 
-
 #carousel .hero-nav {
-    background: #000;
-    color: #fff;
-    cursor: pointer;
-    font-size: 30px;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    transition: ease-out 0.6s;
-    user-select: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: ease-out 0.6s;
+  user-select: none;
 }
 
 #carousel .hero-nav:hover {
-    color: #000;
-    background-color: #fff;
-    transition: ease-in 0.1s;
+  color: #000;
+  background-color: #fff;
+  transition: ease-in 0.1s;
 }
 
 #carousel .prev {
-    left: 5px;
+  left: 5px;
 }
 
 #carousel .next {
-    right: 5px;
+  right: 5px;
 }
 
 .button-container {
-    margin: 19px auto;
-    text-align: center;
+  margin: 19px auto;
+  text-align: center;
 }
 
 .button-container .hero-radio-button {
-    background: white;
-    border-top: 1px inset;
-    border-radius: 7.5px;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 5px;
-    height: 15px;
-    width: 15px;
-    user-select: none;
+  background: white;
+  border-top: 1px inset;
+  border-radius: 7.5px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+  height: 15px;
+  width: 15px;
+  user-select: none;
 }
 
 .button-container .selected {
-    background: red;
+  background: red;
 }

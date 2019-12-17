@@ -1,40 +1,40 @@
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #main {
-    float: left;
+  float: left;
 }
 
 #main button {
-    position: absolute;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 5px;
-    margin: 20px;
-    background-color: #4267b2;
-    color: #fff;
-    letter-spacing: 1px;
-    border: 1px solid black;
-    border-radius: 5px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px;
+  margin: 20px;
+  background-color: #4267b2;
+  color: #fff;
+  letter-spacing: 1px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 #main textarea {
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 #mt div {
-    margin-top: 20px;
-    border: 1px solid rgb(221, 215, 215);
-    border-radius: 5px;
-    padding: 10px;
-    width: 600px;
-    background-color: rgb(246, 246, 209);
-    font-style: italic
+  margin-top: 20px;
+  border: 1px solid rgb(221, 215, 215);
+  border-radius: 5px;
+  padding: 10px;
+  width: 600px;
+  background-color: rgb(246, 246, 209);
+  font-style: italic;
 }
 
 .reply,
@@ -42,39 +42,39 @@ body {
 .delete,
 .like,
 .likeCount {
-    margin: 10px;
-    background: transparent;
-    border: none;
-    font-weight: bolder;
-    text-decoration: underline;
-    cursor: pointer;
+  margin: 10px;
+  background: transparent;
+  border: none;
+  font-weight: bolder;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .like {
-    color: rgb(251, 104, 202);
+  color: rgb(251, 104, 202);
 }
 
 .likeCount {
-    color: skyblue;
-    text-decoration: none;
-    font-style: normal;
-    margin: 1px;
+  color: skyblue;
+  text-decoration: none;
+  font-style: normal;
+  margin: 1px;
 }
 
 .reply {
-    color: limegreen;
+  color: limegreen;
 }
 
 .edit {
-    color: darkblue
+  color: darkblue;
 }
 
 .delete {
-    color: red;
+  color: red;
 }
 
 span {
-    font-weight: bolder;
-    border: 1px solid sandybrown;
-    padding: 10px 30px 10px 30px;
+  font-weight: bolder;
+  border: 1px solid sandybrown;
+  padding: 10px 30px 10px 30px;
 }

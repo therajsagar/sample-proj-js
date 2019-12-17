@@ -2,41 +2,41 @@ function reIndexing(parentNode) {
   const list = parentNode.children;
   const tasks = [];
   for (let i = 0; i < list.length; i++) {
-    list[i].setAttribute('id', `${parentNode.id}-${i}`);
+    list[i].setAttribute("id", `${parentNode.id}-${i}`);
     tasks.push(list[i].textContent);
   }
 }
 
 function appendComment(parentnode, value) {
-  const newNode = document.createElement('div');
-  const commentText = document.createElement('span');
+  const newNode = document.createElement("div");
+  const commentText = document.createElement("span");
   commentText.innerHTML = value;
 
-  const replyButton = document.createElement('button');
-  replyButton.setAttribute('class', 'reply');
-  replyButton.innerHTML = 'Reply';
-  replyButton.addEventListener('click', replyOnComment);
+  const replyButton = document.createElement("button");
+  replyButton.setAttribute("class", "reply");
+  replyButton.innerHTML = "Reply";
+  replyButton.addEventListener("click", replyOnComment);
 
-  const deleteButton = document.createElement('button');
-  deleteButton.setAttribute('class', 'delete');
-  deleteButton.innerHTML = 'Delete';
-  deleteButton.addEventListener('click', deleteAComment);
+  const deleteButton = document.createElement("button");
+  deleteButton.setAttribute("class", "delete");
+  deleteButton.innerHTML = "Delete";
+  deleteButton.addEventListener("click", deleteAComment);
 
-  const editButton = document.createElement('button');
-  editButton.setAttribute('class', 'edit');
-  editButton.innerHTML = 'Edit';
-  editButton.addEventListener('click', editTheComment);
+  const editButton = document.createElement("button");
+  editButton.setAttribute("class", "edit");
+  editButton.innerHTML = "Edit";
+  editButton.addEventListener("click", editTheComment);
 
-  const likeButton = document.createElement('button');
-  likeButton.setAttribute('class', 'like');
-  likeButton.innerHTML = 'like';
-  likeButton.addEventListener('click', likeTheComment);
+  const likeButton = document.createElement("button");
+  likeButton.setAttribute("class", "like");
+  likeButton.innerHTML = "like";
+  likeButton.addEventListener("click", likeTheComment);
 
-  const likeCount = document.createElement('span');
-  likeCount.innerHTML = '0';
-  likeCount.setAttribute('class', 'likeCount');
+  const likeCount = document.createElement("span");
+  likeCount.innerHTML = "0";
+  likeCount.setAttribute("class", "likeCount");
 
-  const sectionNode = document.createElement('section');
+  const sectionNode = document.createElement("section");
   sectionNode.appendChild(commentText);
   sectionNode.appendChild(likeCount);
   sectionNode.appendChild(likeButton);
@@ -53,27 +53,27 @@ function addComment(ev) {
   const commentField = document.querySelector('textarea[name="main-comment"]');
   const value = commentField.value.trim();
   if (value) {
-    const commentSection = document.getElementById('mt');
+    const commentSection = document.getElementById("mt");
     appendComment(commentSection, value);
     reIndexing(commentSection);
   }
-  commentField.value = '';
+  commentField.value = "";
 }
 
 function commentOperations(parentNode, type) {
   disableEnableAllButtons(true);
-  const input = document.createElement('textarea');
-  const tempButton = document.createElement('button');
-  tempButton.innerHTML = 'Done';
-  tempButton.setAttribute('class', 'reply');
-  const replyWidget = document.createElement('div');
+  const input = document.createElement("textarea");
+  const tempButton = document.createElement("button");
+  tempButton.innerHTML = "Done";
+  tempButton.setAttribute("class", "reply");
+  const replyWidget = document.createElement("div");
   replyWidget.appendChild(input);
   replyWidget.appendChild(tempButton);
   parentNode.appendChild(replyWidget);
-  tempButton.addEventListener('click', () => {
+  tempButton.addEventListener("click", () => {
     const value = input.value.trim();
     if (value) {
-      if (type === 'reply') {
+      if (type === "reply") {
         appendComment(parentNode, input.value);
       } else {
         parentNode.children[0].innerHTML = input.value;
@@ -86,7 +86,7 @@ function commentOperations(parentNode, type) {
 
 function replyOnComment(e) {
   const parentnode = e.target.parentNode;
-  commentOperations(parentnode, 'reply');
+  commentOperations(parentnode, "reply");
 }
 
 function deleteAComment(e) {
@@ -95,11 +95,11 @@ function deleteAComment(e) {
 
 function editTheComment(e) {
   const parentnode = e.target.parentNode;
-  commentOperations(parentnode, 'edit');
+  commentOperations(parentnode, "edit");
 }
 
 function disableEnableAllButtons(disable) {
-  const buttonArray = document.querySelectorAll('button');
+  const buttonArray = document.querySelectorAll("button");
   buttonArray.forEach(bt => (bt.disabled = disable));
 }
 

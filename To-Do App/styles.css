@@ -1,82 +1,79 @@
 .dropzone {
-    width: 280px;
-    height: 20px;
-    border: 1.5px solid darkblue;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-weight: bold;
-    background-color: rgb(236, 223, 248);
+  width: 280px;
+  height: 20px;
+  border: 1.5px solid darkblue;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgb(236, 223, 248);
 }
 
 span {
-    font-size: 18px;
-    overflow: hidden;
+  font-size: 18px;
+  overflow: hidden;
 }
 
-.app>div {
-    float: left;
-    margin: 40px;
-    border: 2px solid #000;
-    padding: 10px;
+.app > div {
+  float: left;
+  margin: 40px;
+  border: 2px solid #000;
+  padding: 10px;
 }
 
 input {
-    font-style: italic;
-    width: 250px;
-    height: 35px;
-    font-size: 15px;
-    border: 1.5px solid rgb(0, 119, 93);
-    font-weight: bold;
-    padding: 5px;
-    overflow: hidden;
+  font-style: italic;
+  width: 250px;
+  height: 35px;
+  font-size: 15px;
+  border: 1.5px solid rgb(0, 119, 93);
+  font-weight: bold;
+  padding: 5px;
+  overflow: hidden;
 }
 
 button {
-    color: red;
-    background-color: transparent;
-    cursor: pointer;
-    margin: 10px;
-    font-weight: bold;
-    height: 30px;
-
+  color: red;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+  height: 30px;
 }
-
 
 #done-fields,
 #prog-fields,
 #new-fields {
-    margin-top: 10px;
-    padding: 10px;
+  margin-top: 10px;
+  padding: 10px;
 }
 
-
 .dropzone:last-child {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 form {
-    padding: 10px;
+  padding: 10px;
 }
 
 .deleteTask {
-    border: none;
-    float: right;
-    margin-top: -5px;
+  border: none;
+  float: right;
+  margin-top: -5px;
 }
 
 .dropzone:active {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 .hovering {
-    background-color: blue !important;
-    color: white
+  background-color: blue !important;
+  color: white;
 }
 
 header,
 h2 {
-    text-align: center;
-    text-decoration: underline;
-    font-style: italic
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
 }
