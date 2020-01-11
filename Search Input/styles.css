@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.autocomplete {
+  width: 300px;
+  position: relative;
+  display: inline-block;
+}
+
+body {
+  font: 16px Arial;
+}
+
+input {
+  border: 1px solid rgb(110, 83, 155);
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#myInput {
+  width: 100%;
+  background-color: #d4e9f0;
+}
+
+#myinput:focus {
+  background-color: lemonchiffon;
+}
+
+.ac-list {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  width: 100%;
+}
+
+.ac-list div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #cabbff;
+}
+
+.ac-list div:hover {
+  background-color: rgb(241, 253, 186);
+  color: rgb(101, 42, 196);
+}
+
+.ac-active {
+  background-color: #d4e9f0 !important;
+  color: rgb(31, 93, 187);
+}
