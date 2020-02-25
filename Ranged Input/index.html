@@ -35,6 +35,8 @@
                         for (let k = Math.min(s, e); k <= Math.max(s, e); k++) {
                             checkAdd(k)
                         }
+                    }else if(s || e){
+                        checkAdd(s || e)
                     }
                 } else {
                     const k = Number(i.trim());
