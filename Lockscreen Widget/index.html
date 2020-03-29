@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Lock Pad</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div id="main">
+        <input type="password" id="textfield" placeholder="Enter 4-digit PIN" readonly autofocus onkeypress="myFunction(event)"/>
+        <div id="keypad" onclick="onKeyInput(event)">
+          <div class="ip-key">1</div>
+          <div class="ip-key">2</div>
+          <div class="ip-key">3</div>
+          <div class="ip-key">4</div>
+          <div class="ip-key">5</div>
+          <div class="ip-key">6</div>
+          <div class="ip-key">7</div>
+          <div class="ip-key">8</div>
+          <div class="ip-key">9</div>
+          <div class="clr-key">&#x2715</div>
+          <div class="ip-key">0</div>
+          <div class="done-key">&#x2713</div>
+        </div>
+      </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
