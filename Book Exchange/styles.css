@@ -1,0 +1,72 @@
+body {
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dee4e488;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #808f8fa9;
+  padding: 18px;
+}
+
+header > * {
+  margin: auto 60px;
+}
+
+header:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+header:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+#login-inp {
+  font-size: 15px;
+  line-height: 1em;
+  width: 12.5em;
+  outline: none;
+  text-transform: capitalize;
+}
+
+#submit-btn {
+  font-size: 15px;
+  padding: 1px 15px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.error {
+  background-color: rgb(252, 195, 185);
+}
+
+#content-table {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table,
+tr,
+th,
+td {
+  border: 0.1px solid rgb(165, 165, 165);
+  border-collapse: separate;
+  border-spacing: 0px;
+  text-align: left;
+}
+
+td,
+th {
+  padding: 20px;
+  text-transform: capitalize;
+}
