@@ -35,42 +35,42 @@
     </div>
 
     <script>
-      const btnWrapper = document.getElementById("star-div");
-      const btnList = document.querySelectorAll(".star");
-
-      let starIdx = 0;
-
       (() => {
+        const btnWrapper = document.getElementById("star-div");
+        const btnList = document.querySelectorAll(".star");
+
+        let starIdx = 0;
+
         btnWrapper.addEventListener("click", handleClick);
         btnList.forEach((btn) => {
           btn.addEventListener("mouseenter", handleFocus);
         });
         btnWrapper.addEventListener("mouseleave", handleBlur);
+
+        function handleFocus({ target: { dataset } }) {
+          generateStars(dataset.idx);
+        }
+
+        function handleBlur() {
+          generateStars();
+        }
+
+        function handleClick({ target: { dataset } }) {
+          starIdx = dataset.idx;
+          generateStars();
+        }
+
+        function generateStars(limitIndex = starIdx) {
+          btnList.forEach((btn) => {
+            const { idx } = btn.dataset;
+            if (idx <= limitIndex) {
+              btn.classList.add("rated");
+            } else {
+              btn.classList.remove("rated");
+            }
+          });
+        }
       })();
-
-      function handleFocus({ target: { dataset } }) {
-        generateStars(dataset.idx);
-      }
-
-      function handleBlur() {
-        generateStars();
-      }
-
-      function handleClick({ target: { dataset } }) {
-        starIdx = dataset.idx;
-        generateStars();
-      }
-
-      function generateStars(limitIndex = starIdx) {
-        btnList.forEach((btn) => {
-          const { idx } = btn.dataset;
-          if (idx <= limitIndex) {
-            btn.classList.add("rated");
-          } else {
-            btn.classList.remove("rated");
-          }
-        });
-      }
     </script>
   </body>
 </html>
