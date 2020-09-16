@@ -1,12 +1,14 @@
 <html>
   <style>
     #star-div {
-      height: 100%;
-      width: 100%;
-      display: flex;
+      display: inline-flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     .star {
       margin: 10;
@@ -33,17 +35,36 @@
     </div>
 
     <script>
+      const btnWrapper = document.getElementById("star-div");
       const btnList = document.querySelectorAll(".star");
-      btnList.forEach((btn) => {
-        btn.addEventListener("click", ratingGenerator);
-        btn.addEventListener("mouseenter", ratingGenerator);
-      });
 
-      function ratingGenerator({ target: { dataset } }) {
-        const limit = dataset.idx;
+      let starIdx = 0;
+
+      (() => {
+        btnWrapper.addEventListener("click", handleClick);
+        btnList.forEach((btn) => {
+          btn.addEventListener("mouseenter", handleFocus);
+        });
+        btnWrapper.addEventListener("mouseleave", handleBlur);
+      })();
+
+      function handleFocus({ target: { dataset } }) {
+        generateStars(dataset.idx);
+      }
+
+      function handleBlur() {
+        generateStars();
+      }
+
+      function handleClick({ target: { dataset } }) {
+        starIdx = dataset.idx;
+        generateStars();
+      }
+
+      function generateStars(limitIndex = starIdx) {
         btnList.forEach((btn) => {
           const { idx } = btn.dataset;
-          if (idx <= limit) {
+          if (idx <= limitIndex) {
             btn.classList.add("rated");
           } else {
             btn.classList.remove("rated");
