@@ -1,0 +1,44 @@
+.features {
+  display: flex;
+}
+
+.row {
+  display: flex;
+}
+
+.img-container {
+  display: flex;
+}
+
+.f-name {
+  width: 300px;
+  border-right: 2px solid #f1f1f1;
+}
+
+.compare {
+  min-width: 300px;
+}
+#feature-list {
+  border-bottom: 2px solid #f1f1f1;
+}
+
+#display {
+  display: flex;
+}
+
+header {
+  background: #e8eaf6;
+}
+
+img {
+  width: 200px;
+}
+
+.empty {
+  width: 200px;
+  height: 100px;
+  background: #f1f1f1;
+}
+.btn-container {
+  min-width: 300px;
+}
