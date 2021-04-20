@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+}
+
+#banner-wrapper {
+  display: inline-flex;
+}
+
+#features-wrapper-main {
+  display: inline-flex;
+}
+
+.banner-img-container {
+  display: flex;
+  width: 700px;
+  justify-content: space-between;
+}
+
+.compare {
+  text-align: center;
+}
+
+.img-container {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  margin-left: 7.5px;
+}
+
+.item-title-info > div {
+  line-height: 25px;
+}
+
+.compare,
+.img-container {
+  width: 300px;
+}
+
+.compare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-banner-item,
+.empty-div-item {
+  width: 200px;
+  height: 120px;
+}
+
+.empty-div-item {
+  background-color: rgb(226, 226, 226);
+}
+
+.pricing-summary > span {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.original-price {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.discount-perc {
+  color: green;
+}
+
+.features-wrapper {
+  margin-bottom: 10px;
+}
+
+.feature-header {
+  font-weight: 600;
+  background-color: wheat;
+}
+
+.feat-row-item {
+  display: inline-flex;
+  width: 900px;
+  justify-content: space-between;
+}
+
+.feat-row-name {
+  width: 300px;
+}
+
+.feat-row-value-wrapper {
+  display: inline-flex;
+  width: 700px;
+  justify-content: space-between;
+}
+
+.feat-row-value {
+  text-align: center;
+  width: 240px;
+}
