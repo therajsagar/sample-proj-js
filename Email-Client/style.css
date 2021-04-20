@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#email-filter-wrapper {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 7.5px;
+  border-radius: 25px;
+}
+
+.filter-btn:hover,
+.active-filter {
+  background-color: silver;
+}
+
+.email-info-wrapper {
+  display: flex;
+}
+
+#email-listing-wrapper {
+  flex: 1;
+}
+
+#email-detail-wrapper {
+  flex: 2;
+  background-color: #fafafa;
+  margin-left: 1rem;
+  border: 1px solid #cfd2dc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #636363;
+}
+
+.email-item-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cfd2dc;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  line-height: 1.6rem;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.email-item-wrapper:hover {
+  border-color: #e54065;
+}
+
+.email-item-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.email-item-active {
+  background-color: #e1e4ea;
+}
+
+.email-item-info-wrapper {
+  color: #636363;
+  flex: 1;
+}
+
+.thumbnail-email-listing-item {
+  height: 4rem;
+  width: 4rem;
+  font-size: 1.8rem;
+  background-color: #e54065;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.email-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email-head-info {
+  display: flex;
+  align-items: center;
+}
+
+.email-details-subject {
+  font-size: 1.5rem;
+}
+
+.mark-as-fav-btn {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #e54065;
+  font-weight: 100;
+  float: right;
+}
+
+.mark-as-fav-btn:hover {
+  color: #e54065;
+  background-color: #fff;
+  border: 1px solid #e54065;
+}
+
+.email-details-subheader {
+  margin: 1rem 5rem 1.5rem;
+}
+
+.email-details-body {
+  margin: 3rem 5rem 0;
+}
+
+.empty-list-msg {
+  font-size: 1.5rem;
+  margin: 2.5rem 0;
+}

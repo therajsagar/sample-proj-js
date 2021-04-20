@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Email Client</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="email-filter-wrapper">
+        <span> Filter By: </span>
+        <button class="filter-btn active-filter" data-filtervalue="unread">
+          Unread
+        </button>
+        <button class="filter-btn" data-filtervalue="read">Read</button>
+        <button class="filter-btn" data-filtervalue="favorite">
+          Favorites
+        </button>
+      </div>
+
+      <div class="email-info-wrapper">
+        <div id="email-listing-wrapper"></div>
+        <div id="email-detail-wrapper" class="hidden"></div>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </body>
+</html>
